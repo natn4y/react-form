@@ -16,7 +16,7 @@ const saveToExcel = async (formData) => {
     column.width = 15; // Definir a largura desejada (em caracteres)
   });
 
-  const filePath = path.join(process.cwd(), 'uploads', 'form_data.xlsx');
+  const filePath = path.join(process.cwd(), './', 'form_data.xlsx');
   await workbook.xlsx.writeFile(filePath);
 };
 

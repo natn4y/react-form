@@ -5,6 +5,7 @@ import { format } from 'date-fns';
 import InputMask from 'react-input-mask';
 import axios from 'axios';
 import Modal from './Modal';
+import Link from 'next/link';
 
 export default function Home() {
 const { register, handleSubmit, formState: { errors } } = useForm();
@@ -109,9 +110,9 @@ Enviar
 <Modal closeModal={closeModal}>
 <h2 className="text-xl font-bold mb-4">Formulário enviado com sucesso!</h2>
 <p className="mb-4">Obrigado pelo envio.</p>
-<a href="/api/download-excel" className="download-button hover:text-blue-500">
+<Link href="/api/download-excel" className="download-button hover:text-blue-500">
 <strong>Download do Arquivo Excel</strong>
-</a>
+</Link>
 </Modal>
 )}
 </div>
